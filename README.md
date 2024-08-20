@@ -1,50 +1,38 @@
-# React + TypeScript + Vite
+### Standard Requirements
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- [x] Setup eslint
+- [x] Pass all linting checks
+- [x] Format code with prettier
+- [?] State should not be duplicated
+- [x] Variables should be named logicially
+- [x] No unneccessary console logs
+- [x] No commented out blocks of code (Code comments are fine)
 
-Currently, two official plugins are available:
+### Specific Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [x] Set up a react app using Vite
+- [x] draw out your component tree in excalidraw
+- [x] Get your react app to look EXACTLY the same as this html project
+- [x] Use props to customize components that are being used
+- [x] Use conditional rendering to render odd rows as dark and even rows as light with the "light" | "dark" class names
+- [x] Abstract any REPEATED UI into Components
+- [x] Use per-component CSS imports
 
-## Expanding the ESLint configuration
+  For example if you have a `CharacterCard.css` you can have an import that looks like so
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+```jsx
+import "./some-css-file";
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+function CharacterCard() {
+  // code goes here
+}
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- [x] Have at least one Class Component that uses props
+- [x] Have at least one Functional Component that uses props
+- [x] Transform the original data to get the data you want for each component
+  - The characters in the table should be sorted by votes as shown in the html app
+  - The characters table should only show the first top 5 characters
+  - The character cards should show all characters, and does not need to be sorted
+  - We should be passing our array of characters (the data array) from the top to the children
+  - You can transform that data either before or after sending it to the child component
