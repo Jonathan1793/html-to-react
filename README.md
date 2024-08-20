@@ -4,8 +4,8 @@
 - [x] Pass all linting checks
 - [x] Format code with prettier
 - [?] State should not be duplicated
-- [x] Variables should be named logicially
-- [x] No unneccessary console logs
+- [x] Variables should be named logically
+- [x] No unnecessary console logs
 - [x] No commented out blocks of code (Code comments are fine)
 
 ### Specific Requirements

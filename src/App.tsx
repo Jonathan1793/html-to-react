@@ -10,7 +10,6 @@ function App() {
   firstFiveByVotes = firstFiveByVotes
     .slice(0, 5)
     .sort((a, b) => b.votes - a.votes);
-  console.log(firstFiveByVotes);
   return (
     <>
       <NavBarComponent />
